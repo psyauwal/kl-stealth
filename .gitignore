@@ -1,0 +1,49 @@
+# Compiled binaries
+*.exe
+*.dll
+*.obj
+*.lib
+*.pdb
+*.exp
+*.ipdb
+*.iobj
+
+# Build artifacts
+build/
+dist/
+Release/
+Debug/
+x64/
+x86/
+
+# IDE / Editor
+.vs/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+kl_debug.log
+
+# Sensitive config (NEVER commit real credentials)
+!src/kl_fixed.cpp
+config.local.*
+*.env
+*.secret
+
+# Telegram credentials template (for reference only)
+# src/kl_fixed.cpp should have placeholders in public repos:
+# const std::string BOT_TOKEN_PLAINTEXT = "YOUR_BOT_TOKEN_HERE";
